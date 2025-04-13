@@ -1,0 +1,8 @@
+bkp_*
+*.pdf
+*.png
+*.gif
+*.json
+*.tex
+*.txt
+__pycache__
