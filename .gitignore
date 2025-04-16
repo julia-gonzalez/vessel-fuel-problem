@@ -5,4 +5,5 @@ bkp_*
 *.json
 *.tex
 *.txt
+*.pickle
 __pycache__

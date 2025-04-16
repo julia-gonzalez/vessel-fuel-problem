@@ -1,4 +1,4 @@
-import json
+import pickle
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from matplotlib.animation import FuncAnimation
@@ -123,11 +123,11 @@ def draw_state(ax, data):
     plt.tight_layout()
 
 
-def main(solution_id = 6):
+def main(solution_id = 0):
     os.makedirs("animations", exist_ok=True)
-    solution_file = f'solutions/solution_{solution_id:04d}.json'
+    solution_file = f'solutions_greedy/solution_{solution_id:04d}.pickle'
     animation_file = f'animations/animation_{solution_id:04d}.gif'
-    states = json.load(open(solution_file, 'r'))
+    states = pickle.load(open(solution_file, 'rb'))
     def update(frame):
         print("%.2f" % (100*frame/len(states)), '%')
         draw_state(ax, states[frame])
